@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Элитный Дом ДВ — Строительные услуги</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+    <div style="display: flex; align-items: center; justify-content: center; gap: 15px;">
+        <img src="https://elitehousedv.ru/thumb/2/_cWj-EVaWL9stISpchpQQA/640r480/d/1527116-8739.png" 
+             alt="Логотип СтройМастер" 
+             class="logo">
+        <div>
+            <h1>Элитный Дом ДВ</h1>
+            <p>Профессиональное строительство домов и коммерческих объектов</p>
+        </div>
+    </div>
+</header>
+
+    <nav>
+        <a href="#home">Главная</a>
+        <a href="#services">Услуги</a>
+        <a href="#projects">Проекты</a>
+        <a href="#contact">Контакты</a>
+    </nav>
+
+    <main>
+        <section id="home">
+            <h2>Добро пожаловать</h2>
+            <p>Мы специализируемся на строительстве жилых и коммерческих зданий с 2005 года. Качество, надёжность и сроки — наш приоритет.</p>
+        </section>
+
+        <section id="services" class="services">
+            <h2>Наши услуги</h2>
+            <div class="service-card">
+                <h3>Фундамент</h3>
+                <p>Закладка прочного фундамента — основа любого здания. Мы используем только качественные материалы.</p>
+            </div>
+            <div class="service-card">
+                <h3>Кирпичная кладка</h3>
+                <p>Профессиональная кладка из кирпича и газобетона с соблюдением всех норм.</p>
+            </div>
+            <div class="service-card">
+                <h3>Кровля</h3>
+                <p>Монтаж кровли любой сложности: от чердачных до плоских крыш.</p>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <h2>Свяжитесь с нами</h2>
+            <p>Телефон: +7 (964) 321 22 22</p>
+            <p>Email: elitehousedv@bk.ru </p>
+            <p>Адрес: г. Уссурийск, ул. Крестьянская, д. 58</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Элитный Дом ДВ. Все права защищены.</p>
+    </footer>
+<script>
+    // Анимация появления секций при прокрутке
+    const sections = document.querySelectorAll('section');
+
+    function checkVisibility() {
+        sections.forEach(section => {
+            const rect = section.getBoundingClientRect();
+            // Если секция в пределах экрана
+            if (rect.top < window.innerHeight * 0.8 && rect.bottom > 0) {
+                section.classList.add('visible');
+            }
+        });
+    }
+
+    // Запускаем при загрузке и при прокрутке
+    window.addEventListener('load', checkVisibility);
+    window.addEventListener('scroll', checkVisibility);
+</script>
+</body>
+</html>
